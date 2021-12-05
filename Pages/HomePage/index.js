@@ -2,8 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar'
 import RegistrationPage from '../RegistrationPage';
 import LoginPage from '../LoginPage';
-import "./style.css";
-import logo from "../../Homepage.png"
+import MeditationListPage from '../MeditationListPage';
 
 const HomePage = () => {
 
@@ -14,6 +13,9 @@ const HomePage = () => {
     return (
         
         <div>
+            <Navbar />
+            <RegistrationPage />
+            <MeditationListPage />
             <header>
             <img src={logo} alt="oop" height = "600px" width = "50%"/>
             </header>
@@ -28,4 +30,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-
