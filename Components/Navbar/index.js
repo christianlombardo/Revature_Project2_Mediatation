@@ -1,12 +1,10 @@
 import React from 'react'
 import HomePage from '../../Pages/HomePage';
-import './style.css'
+import './style.css';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
 
-  function onClick (e){
-
-  }
 
     return (
       <div className = "navWrapper">
@@ -15,10 +13,10 @@ const Navbar = () => {
     <a className="navbar-brand">Reconnect</a>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link active" href="#">About Us</a>
-        <a className="nav-link active" href="#">Create an account</a>
-        <a className="nav-link" href="#"></a>
+        <Link className="nav-link active" aria-current="page" to = '/HomePage'>Home</Link>
+        <Link className="nav-link active" aria-current="page" to = '/AboutUsPage'>About Us</Link>
+        <Link className="nav-link active" aria-current="page" to = '/RegistrationPage'>Create an account</Link>
+        <Link className="nav-link active" aria-current="page" to = '/LoginPage'>Login</Link>
       </div>
     </div>
   </div>

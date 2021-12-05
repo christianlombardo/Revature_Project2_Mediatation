@@ -1,21 +1,16 @@
-import React from 'react'
-import Navbar from '../../Components/Navbar'
-import RegistrationPage from '../RegistrationPage';
-import LoginPage from '../LoginPage';
+import React from 'react';
 import "./style.css";
-import logo from "../../Homepage.png"
+import MantraPageHeader from './MantraPageHeader';
 
-const HomePage = () => {
+const MeditaionDetailPage = () => {
 
-
+    
     return (
-        
+       
         <div>
-            <header>
-            <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/>
-            </header>
+             <MantraPageHeader />
             <body>
-           <h1 className = "title">Our Mission:</h1>
+           <h1 className = "title">Mantra Meditation</h1>
            <h3 className = "discriptionHomePage">Meditation application for the user to gain some quiet time for the mind. The user stops to take some time out during the day to  reconnect with their true self. Choose from a wide selection of meditation styles and track your sessions with our built in timers. We look forward to 
            helping you Reconnect to the things that matter to you.
            </h3>
@@ -24,5 +19,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
-
+export default MeditaionDetailPage;
