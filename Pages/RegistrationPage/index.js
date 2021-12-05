@@ -1,7 +1,10 @@
 import React from 'react'
+import Navbar from '../../Components/Navbar';
 import './style.css'
 
 const RegistrationPage = () => {
+
+    <Navbar />
     return ( /*
         <div className = "registrationWrapper ">  
        <div class="container">
@@ -108,7 +111,6 @@ const RegistrationPage = () => {
         </div>
     </section>
 </form>
-
     )
 }
 

@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from '../../Components/Navbar';
 
 
 
 
 const LoginPage = () => {
+
+    <Navbar />
     return ( 
 <div className = "registrationWrapper ">  
 <form>
