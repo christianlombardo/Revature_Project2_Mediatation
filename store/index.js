@@ -1,12 +1,15 @@
-import { createStore } from 'redux'
+import React, { useEffect, useState } from 'react';
+import { createStore } from 'redux';
 
 // initial timer
 const initialState = {
-    minutes: 5
+    minutes: 5,
 }
+
 
 const timerReducer = (state=initialState, action) => {
     if (action.type === "start") {
+        
         return {
             minutes: state.minutes
         };
