@@ -3,6 +3,8 @@ import Navbar from '../../Components/Navbar'
 import RegistrationPage from '../RegistrationPage';
 import LoginPage from '../LoginPage';
 import MeditationListPage from '../MeditationListPage';
+import logo from '../../Homepage.png';
+import './style.css'
 
 const HomePage = () => {
 
@@ -10,9 +12,6 @@ const HomePage = () => {
     return (
         
         <div>
-            <Navbar />
-            <RegistrationPage />
-            <MeditationListPage />
             <header>
             <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/>
             </header>

@@ -4,9 +4,14 @@ import HomePage from './Pages/HomePage';
 import MeditaionDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
+import MantraPageHeader from './Pages/MeditationDetailPage/MantraPageHeader';
 
 function App() {
   return (
+
+
+
+    
     <div>
       
       <Navbar />
