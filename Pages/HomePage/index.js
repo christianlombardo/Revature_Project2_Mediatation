@@ -14,7 +14,7 @@ const HomePage = () => {
             <RegistrationPage />
             <MeditationListPage />
             <header>
-            <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/>
+            {/* <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/> */}
             </header>
             <body>
            <h1 className = "title">Our Mission:</h1>

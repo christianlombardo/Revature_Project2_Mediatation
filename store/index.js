@@ -2,18 +2,34 @@ import { createStore } from 'redux'
 
 // initial timer
 const initialState = {
-    timer: 5
+    minutes: 5
 }
 
-const TimerReducer = (state=initialState, action) => {
+const timerReducer = (state=initialState, action) => {
     if (action.type === "start") {
-
-        return (
-            <div>
-                
-            </div>
-        );
+        return {
+            minutes: state.minutes
+        };
     }
+    
+
+    if (action.type === "increment") {
+        return {
+            timer: state.minutes + 1,
+        };
+    }
+
+    if (action.type === "decrement") {
+        return {
+            timer: state.minutes - 1,
+        };
+    }
+
+    return state;
+
 }
 
-export default TimerReducer
+// create store
+const store = createStore(timerReducer)
+
+export default store
