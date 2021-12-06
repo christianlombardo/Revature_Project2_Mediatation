@@ -5,29 +5,6 @@ import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 
 const MeditatingPage = (props) => {
-
-    const hoursMinSecs = {minutes: 5, seconds: 0}
-
-    const { minutes = 0, seconds = 60 } = hoursMinSecs;
-    const [[mins, secs], setTime] = React.useState([minutes, seconds]);
-
-    const tick = () => {
-   
-        if (mins === 0 && secs === 0) {
-            setTime([59, 59]);
-        } else if (secs === 0) {
-            setTime([mins - 1, 59]);
-        } else {
-            setTime([mins, secs - 1]);
-        }
-    };
-
-    const reset = () => setTime([parseInt(minutes), parseInt(seconds)]);
-
-    React.useEffect(() => {
-        const timerId = setInterval(() => tick(), 1000);
-        return () => clearInterval(timerId);
-    });
     
     return(
         <div>
