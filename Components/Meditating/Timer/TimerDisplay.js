@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 
 const TimerDisplay = () => {
 
-    // const minutes = useSelector(state => state.minutes)
+    const minutes = useSelector(state => state.minutes)
+    const mins = useSelector(state => state.mins)
+    const secs = useSelector(state => state.secs)
     // const seconds = 0
 
     // const [[mins, secs], setTime] = React.useState([minutes, seconds]);
@@ -27,7 +29,8 @@ const TimerDisplay = () => {
 
     return (
         <div>
-            <h1>{/*`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`*/}</h1>
+            <h1>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</h1>
+            <h1>{minutes}:00</h1>
         </div>
     )
 }
