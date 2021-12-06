@@ -4,17 +4,21 @@ import HomePage from './Pages/HomePage';
 import MeditaionDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
-import MantraPageHeader from './Pages/MeditationDetailPage/MantraPageHeader';
+import MeditatingPage from './Pages/MeditatingPage';
+
+// Redux
+import { Provider } from 'react-redux';
+import store from './store/index'
+
 
 function App() {
   return (
-
-
-
-    
     <div>
       
       <Navbar />
+      <Provider store={store}>
+        <MeditatingPage />
+      </Provider>
       <Routes>
       <Route path = '/HomePage' element={<HomePage/>}/>
       <Route path = '/LoginPage' element={<LoginPage/>}/>
