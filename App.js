@@ -6,6 +6,7 @@ import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
 import MeditatingPage from './Pages/MeditatingPage';
 
+
 // Redux
 import { Provider } from 'react-redux';
 import store from './store/index'
@@ -16,9 +17,11 @@ function App() {
     <div>
       
       <Navbar />
-      <Provider store={store}>
+      {/* <Provider store={store}>
         <MeditatingPage />
-      </Provider>
+      </Provider> */}
+      <MeditatingPage />
+
       <Routes>
       <Route path = '/HomePage' element={<HomePage/>}/>
       <Route path = '/LoginPage' element={<LoginPage/>}/>

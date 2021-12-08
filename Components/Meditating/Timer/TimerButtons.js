@@ -13,7 +13,8 @@ const TimerButtons = (props) => {
         dispatch({type: 'decrement'})
     }
 
-    const startHandler = () => {
+    const startHandler = (state) => {
+        // pass state.minutes to the
         dispatch({type: 'start'})
     }
 

@@ -9,7 +9,7 @@ const MeditaionDetailPage = () => {
        
         <div>
             <header>
-            <img src={logo} className = "Images" alt="oop" height = "25%" width = "25%"/>
+            {/* <img src={logo} className = "Images" alt="oop" height = "25%" width = "25%"/> */}
             </header>
             <body>
            <h1 className = "title">Mantra Meditation</h1>
