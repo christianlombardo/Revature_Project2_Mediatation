@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
+=======
+import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
+>>>>>>> b128f1ce65e08cc53a661dfaa259196a4842b403
 
 const TimerDisplay = (state) => {
 

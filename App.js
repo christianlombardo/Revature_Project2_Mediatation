@@ -1,4 +1,4 @@
-import {Route, Routes, Link} from 'react-router-dom';
+import {Route, Routes, Link} from 'react-router';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import MeditaionDetailPage from './Pages/MeditationDetailPage';
