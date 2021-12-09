@@ -14,8 +14,8 @@ const MeditatingPage = (props) => {
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
                 {/* <TimerDisplay />
                 <TimerButtons /> */}
-                <TimerClass />
                 
+                <TimerClass />
                 {
                 // Begin Meditation Button
                 // Dynamic Instructions
