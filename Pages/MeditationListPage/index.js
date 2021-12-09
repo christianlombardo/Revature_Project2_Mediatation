@@ -3,9 +3,9 @@ import MeditationList from '../../Components/MeditationList'
 
 const MeditationListPage = () => {
     return (
-        <>
+        
             <MeditationList />
-        </>
+        
         )
 }
 

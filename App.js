@@ -5,6 +5,7 @@ import MeditaionDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
 import MeditatingPage from './Pages/MeditatingPage';
+import MeditationList from './Components/MeditationList';
 
 
 // Redux
@@ -15,8 +16,9 @@ import store from './store/index'
 function App() {
   return (
     <div>
-      
       <Navbar />
+      <MeditationList />
+      
       {/* <Provider store={store}>
         <MeditatingPage />
       </Provider> */}
