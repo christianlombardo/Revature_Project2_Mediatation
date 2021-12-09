@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d125a2cd7317ebd90b89b9f651d086de9767990
 import React, {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 7d125a2cd7317ebd90b89b9f651d086de9767990
 const TimerDisplay = (state) => {
 
     const minutes = useSelector(state => state.minutes)
