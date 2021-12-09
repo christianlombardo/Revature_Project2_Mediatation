@@ -2,6 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import FavoriteButton from "../../Components/Meditating/FavoriteButton";
 import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
+import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 
 
@@ -13,14 +14,8 @@ const MeditatingPage = (props) => {
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
                 {/* <TimerDisplay />
                 <TimerButtons /> */}
-<<<<<<< HEAD
-                {/* <TimerClass /> */}
-
-                <TimerDisplay />
-=======
                 
->>>>>>> 773d05f2573ff5eb588f3066257363ccfd3b18c7
-
+                <TimerClass />
                 {
                 // Begin Meditation Button
                 // Dynamic Instructions
