@@ -11,7 +11,6 @@ import MeditationList from './Components/MeditationList';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store/index'
-import MeditationList from './Components/MeditationList';
 
 
 function App() {

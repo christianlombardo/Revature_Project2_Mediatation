@@ -11,7 +11,11 @@ const MeditaionDetailPage = (props) => {
 
          <div>
              <header>
+<<<<<<< HEAD
              <img src={props.animage} className = "meditationDetail" alt="oop" height = "25%" width = "25%"/>
+=======
+             <img src={props.animage} className = "meditationDetail" alt="oop" />
+>>>>>>> 7d125a2cd7317ebd90b89b9f651d086de9767990
            </header>
              <body>
             <h1 className = "title">Mantra Meditation</h1>
