@@ -74,7 +74,7 @@ import ReactDOM from 'react-dom';
 
 const TimerClass = (props) => {
 
-    const minutes = 15;//props.minutes       //useSelector(state => state.minutes)
+    const minutes = props.minutes
     //const mins = useSelector(state => state.mins)
     //const secs = useSelector(state => state.secs)
     const seconds = 0

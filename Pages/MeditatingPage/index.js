@@ -8,6 +8,7 @@ import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 
 const MeditatingPage = (props) => {
     
+
     return(
         <div>
             <div className="container text-center">
@@ -15,7 +16,7 @@ const MeditatingPage = (props) => {
                 {/* <TimerDisplay />
                 <TimerButtons /> */}
                 
-                <TimerClass />
+                <TimerClass minutes="17"  /> {/*props.minutes*/}
                 {
                 // Begin Meditation Button
                 // Dynamic Instructions
@@ -25,7 +26,6 @@ const MeditatingPage = (props) => {
                 // Diary Notes textarea to display after the mediataion timer completes.}
 
                 /* 
-                <BeginMeditationButton />
                 <MeditationInstructions />
                 <MeditationDiaryNotes /> */}
             </div>
