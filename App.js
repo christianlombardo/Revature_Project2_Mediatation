@@ -10,6 +10,7 @@ import MeditatingPage from './Pages/MeditatingPage';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store/index'
+import MeditationList from './Components/MeditationList';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <MeditatingPage />
       </Provider> */}
       <MeditatingPage />
+      <MeditationList />
 
       <Routes>
       <Route path = '/HomePage' element={<HomePage/>}/>
