@@ -1,8 +1,10 @@
 import React from 'react';
 import "./style.css";
 import MantraPageHeader from './MantraPageHeader';
+import MeditationList from '../../Components/MeditationList';
+import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 
-const MeditaionDetailPage = (props) => {
+const MeditationDetailPage = () => {
 
     
     return (
@@ -11,16 +13,17 @@ const MeditaionDetailPage = (props) => {
 
          <div>
              <header>
-             <img src={props.animage} className = "meditationDetail" alt="oop" />
+             <p>sgddfghdfhmmmmmmmmmdfhd</p>
+            {/*<img src={props.image} className = "meditationDetail" alt="oop" />*/}
            </header>
              <body>
-            <h1 className = "title">Mantra Meditation</h1>
-            <h3 className = "discriptionHomePage">Meditation application for the user to gain some quiet time for the mind. The user stops to take some time out during the day to  reconnect with their true self. Choose from a wide selection of meditation styles and track your sessions with our built in timers. We look forward to 
-            helping you Reconnect to the things that matter to you.
+                 <p>sgddfghdfhmmmmmmmmmdfhd</p>
+            <h1 className = "title">fhfghfgh</h1>
+            <h3 className = "discriptionHomePage">
             </h3>
             </body>
-        // </div>
+         </div>
     )
 }
 
-export default MeditaionDetailPage;
+export default MeditationDetailPage;
