@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import mantrasimg from '../mantra.png';
 import breatheimg from '../breathing.png';
 import relaximg from '../progressiverelaxation.png';
+import {combineReducers} from 'redux';
 
  const RelaxAction = () =>{
     return {

@@ -1,5 +1,5 @@
 
-import {combineReducers} from 'redux';
+/*import {combineReducers} from 'redux';
 
 
 const BreatheReducer = (state = " ", action) => {
@@ -76,3 +76,4 @@ const allReducers = combineReducers({
 });
 
 export default allReducers;
+*/
