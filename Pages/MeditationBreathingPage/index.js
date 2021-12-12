@@ -1,6 +1,6 @@
 import React from 'react'
 import breathe from '../../breathing.png';
-import './style.css'
+
 
 const MeditationBreathingPage = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+
 import MantraPageHeader from './MantraPageHeader';
 import MeditationList from '../../Components/MeditationList';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";

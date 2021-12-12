@@ -6,6 +6,9 @@ import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
 import MeditatingPage from './Pages/MeditatingPage';
 import MeditationList from './Components/MeditationList';
+import MeditationRelaxPage from './Pages/MeditationDetailPage/MeditationRelaxPage';
+import MeditationMantraPage from './Pages/MeditationDetailPage/MeditationMantraPage';
+import MeditationBreathingPage from './Pages/MeditationBreathingPage';
 
 
 // Redux
