@@ -7,27 +7,33 @@ import RegistrationPage from './Pages/RegistrationPage';
 import MeditatingPage from './Pages/MeditatingPage';
 import MeditationList from './Components/MeditationList';
 
-// Redux
-import { Provider } from 'react-redux';
-import store from './store/index'
 
+// Redux
+
+import store from './store/index' 
 
 function App() {
   return (
     <div>
+     
       <Navbar />
      
       {/* <Provider store={store}>
         <MeditatingPage />
       </Provider> */}
-
+      
       <Routes>
       <Route path = '/HomePage' element={<HomePage/>}/>
       <Route path = '/LoginPage' element={<LoginPage/>}/>
       <Route path = '/RegistrationPage' element={<RegistrationPage/>}/>
       <Route path = '/MeditationList' element = {<MeditationList/>}/>
       <Route path = '/MeditationDetailPage' element = {<MeditationDetailPage/>}/>
+      
+      <Route path = '/MeditationRelaxPage' element = {<MeditationRelaxPage/>}/>
+      <Route path = '/MeditationMantraPage' element = {<MeditationMantraPage/>}/>
+      <Route path = '/MeditationBreathePage' element = {<MeditationBreathePage/>}/>
       </ Routes>
+     
     </div>
   );
 }

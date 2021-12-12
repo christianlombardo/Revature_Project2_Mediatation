@@ -94,10 +94,6 @@ const RegistrationPage = () => {
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
 
-                                <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                                <label class="form-check-label" for="exampleCheck1">Click here to subscribe</label>
-                                </div>
                                 
                                 <button className="btn btn-outline-primary btn-lg px-10" type="submit">Login</button>
 

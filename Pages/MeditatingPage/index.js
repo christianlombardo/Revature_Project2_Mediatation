@@ -18,7 +18,7 @@ const MeditatingPage = (props) => {
                 <TimerButtons /> */}
                 
                 <TimerClass minutes="17" /> {/*minutes=props.minutes*/}
-                <MeditationInstructions meditation="1"/> {/*meditation={props.meditation_id}*/}
+                {/*meditation={props.meditation_id}*/}
                 {
                 // Dynamic Instructions
                     // Every minute give a new set of instructions.

@@ -4,6 +4,8 @@ import './style.css';
 import mantras from '../../mantra.png';
 import breath from '../../breathing.png';
 import progressive from '../../progressiverelaxation.png';
+import MantraPageHeader from "../../Pages/MeditationDetailPage/MantraPageHeader";
+import MeditationDetailPage from "../../Pages/MeditationDetailPage";
     const MeditationList = () => {
 
         // Data from the source database, JSON, etc......
@@ -65,6 +67,13 @@ import progressive from '../../progressiverelaxation.png';
                             4: 'Gently repeat.'},
         }
     ])
+let name = 'mario';
+
+//<button onClick = {mantraCall()}>To Mantra</button>
+
+   
+     
+
 
         return (
             <div>
@@ -74,7 +83,7 @@ import progressive from '../../progressiverelaxation.png';
                         <img className = "meditationImage" src = {mantra.image} alt = "oop" />
                         <p className = "meditationShortDescription">{mantra.shortDescription}</p>
                         <p className = "meditationTimespend">You’ve spent {mantra.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" {...mantra}>Click to view more </Link>
+                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
 
@@ -83,7 +92,7 @@ import progressive from '../../progressiverelaxation.png';
                         <img className = "meditationImage" src = {relax.image} alt = "oop" />
                         <p className = "meditationShortDescription">{relax.shortDescription}</p>
                         <p className = "meditationTimespend">You’ve spent {relax.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" name = {relax.name}>Click to view more </Link>
+                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
 
@@ -92,7 +101,7 @@ import progressive from '../../progressiverelaxation.png';
                         <img className = "meditationImage" src = {breathing.image} alt = "oop" />
                         <p className = "meditationShortDescription">{breathing.shortDescription}</p>
                         <p className = "meditationTimespend">You’ve spent {breathing.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" name = {breathing.name}>Click to view more </Link>
+                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
             </div>
