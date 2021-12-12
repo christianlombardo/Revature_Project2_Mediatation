@@ -23,7 +23,7 @@ import relaximg from '../progressiverelaxation.png';
     }
 }
 
-const BreatheReducer = (state = " ", action) => {
+const AllReducers = (state = " ", action) => {
 
     switch(action.type){
         case 'breathe':
@@ -38,12 +38,7 @@ const BreatheReducer = (state = " ", action) => {
                                 2: 'feel your abdomen gently expand...',
                                 3: 'breathe out of your mouth and let it all go.',
                                 4: 'Gently repeat.'},  }
-        }
-        }
 
-        const MantraReducer = (state = " ", action) => {
-
-            switch(action.type){
                 case 'mantra':
                         return {   id: 1,
                             name: 'Mantra Meditation',
@@ -59,12 +54,8 @@ const BreatheReducer = (state = " ", action) => {
                          }
         
                          
-                    }
-                }
-
-                const RelaxReducer = (state = " ", action) => {
-
-                    switch(action.type){
+                    
+                
                         case 'relax':
                                 return { id: 2,
                                 name: 'Progressive Relaxation',
@@ -87,13 +78,12 @@ const BreatheReducer = (state = " ", action) => {
                                 12: 'Hold that breath and that contraction for just a moment...and then gently lower your arms and breathe all the way out.',
                                 13: 'Feel how relaxing it is to release any tightness and to breathe away all the tension.'},
                                 }
-                            }
                         }
-
+                    
 const allReducers = combineReducers({
     BreatheReducer,
     MantraReducer,
     RelaxReducer
 });
-
+}
 export default store
