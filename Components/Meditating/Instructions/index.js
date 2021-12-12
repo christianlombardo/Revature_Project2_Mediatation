@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const MeditationInstructions = () => {
+const MeditationInstructions = (props) => {
 
     // Data from the source database, JSON, etc......
     const [meditations, setMeditation] = useState ([
@@ -40,6 +40,14 @@ const MeditationInstructions = () => {
                             4: 'Gently repeat.'},
         }
     ])
+
+
+
+
+        const meditation = props.meditation;
+
+        
+
 
 }
 
