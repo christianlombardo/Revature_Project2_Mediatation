@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux'
 
 // initial timer
 const initialState = {
-    minutes: 5
+    minutes: 5,
+    joseph: 100
 }
 
 const timerReducer = (state=initialState, action) => {
