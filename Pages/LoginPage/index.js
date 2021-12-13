@@ -9,8 +9,7 @@ const LoginPage = () => {
   const [details, setDetails] = useState({email: "", password : ""});
 
   const submitHandler = e => {
-    Axios.post("http://localhost:9001/users/login",{
-        name: details.name,
+    Axios.get("http://localhost:9001/users/login",{
         email: details.email,
         password: details.password,
         entry: details.entry,
@@ -20,12 +19,14 @@ const LoginPage = () => {
     }).catch((error) =>{
         
     })
-    
 };
 
-  
-
-
+function onChangeHandler(event){
+    //console.log(event.target.name)
+    setDetails({...details,
+        [event.target.name]: event.target.value
+    })
+}
 
     return ( 
 
@@ -44,12 +45,12 @@ const LoginPage = () => {
                                 <p className="text-white-50 mb-5">Please enter your email and password</p>
 
                                 <div className="form-outline form-white mb-4">
-                                    <input type="text" id="username" className="form-control form-control-lg" name="username" onChange = {e => setDetails({...details,name: e.target.value})} value ={details.name}/>
+                                    <input type="text" id="username" className="form-control form-control-lg" name="username" onChange = {onChangeHandler} value ={details.name}/>
                                     <label className="form-label" for="username" >Email</label>
                                 </div>
 
                                 <div className="form-outline form-white mb-4">
-                                    <input type="password" id="password" className="form-control form-control-lg" name="password" onChange = {e => setDetails({...details,password: e.target.value})} value ={details.password}/>
+                                    <input type="password" id="password" className="form-control form-control-lg" name="password" onChange = {onChangeHandler} value ={details.password}/>
                                     <label className="form-label" for="password">Password</label>
                                 </div>
 
