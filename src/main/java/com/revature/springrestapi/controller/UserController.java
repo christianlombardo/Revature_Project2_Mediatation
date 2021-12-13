@@ -19,12 +19,32 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public User getEmployee(@PathVariable("id") Long id){
+    public User getEmployee(@PathVariable("id") long id){
         return service.getUserById(id);
+    }
+
+    @GetMapping("/users/login")
+    public User userLogin(@RequestBody User user){
+        return service.userLogin(user);
+    }
+
+    @PostMapping("/users/register")
+    public void userRegister(@RequestBody User user){
+        service.userRegister(user);
     }
 
     @PostMapping("/users")
     public User addEmployee(@RequestBody User user){
         return service.saveUser(user);
+    }
+
+//    @PostMapping("/users/{id}")   // this works as an update successfully.
+//    public User updateUser(@PathVariable("id") long id, @RequestBody User user){
+//        return service.updateUser(id, user);
+//    }
+
+    @PutMapping("/users/{id}")
+    public User updateUser(@PathVariable("id") long id, @RequestBody User user){
+        return service.updateUser(id, user);
     }
 }
