@@ -6,11 +6,20 @@ import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css';
+import Axios from 'axios';
 
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 
 const MeditatingMantraPage = (props) => {
     
+    const submitHandler = e => {
+        Axios.post("https://localhost9001/",{
+          
+
+        }).then((response) =>{
+            console.log(response);
+        });
+    };
 
     return(
         <div>
@@ -37,6 +46,16 @@ const MeditatingMantraPage = (props) => {
                 <li class="list-group-item">4. Softly repeat this manta: "I Am whole, calm, healthy, strong, caring, respectful, powerful and loving" (This chant can be preformed in your mind and does not have to be these words, but what works for you!).</li>
                 <li class="list-group-item">5. Repeat till your mind is clear</li>
                 </ul>
+                <form onSubmit = {submitHandler}>
+                <br></br>
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                </form>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
 
   

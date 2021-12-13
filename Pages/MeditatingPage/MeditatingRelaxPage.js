@@ -6,10 +6,19 @@ import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css'
+import Axios from 'axios';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 
 const MeditatingRelaxPage = (props) => {
     
+    const submitHandler = e => {
+        Axios.post("https://localhost9001/",{
+          
+
+        }).then((response) =>{
+            console.log(response);
+        });
+    };
 
     return(
         <div>
@@ -45,6 +54,16 @@ const MeditatingRelaxPage = (props) => {
                 <li class="list-group-item">12. Hold that breath and that contraction for just a moment...and then gently lower your arms and breathe all the way out.</li>
                 <li class="list-group-item">13. Feel how relaxing it is to release any tightness and to breathe away all the tension.</li>
                 </ul>
+                <form onSubmit = {submitHandler}>
+                <br></br>
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                </form>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
                 {/* Diary Notes textarea to display after the meditation timer completes.*/}
 

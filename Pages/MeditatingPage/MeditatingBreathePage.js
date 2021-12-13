@@ -7,9 +7,20 @@ import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+import Axios from 'axios';
 
 const MeditatingBreathePage = (props) => {
     
+
+    const submitHandler = e => {
+        Axios.post("https://localhost9001/",{
+          
+
+        }).then((response) =>{
+            console.log(response);
+        });
+    };
+
 
     return(
         <div>
@@ -35,6 +46,18 @@ const MeditatingBreathePage = (props) => {
                 <li class="list-group-item">3. breathe out of your mouth and let it all go.</li>
                 <li class="list-group-item">4. Gently repeat.</li>
                 </ul>
+
+                <form onSubmit = {submitHandler}>
+                <br></br>
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                </form>
+
+               
+                <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
                 {/* Diary Notes textarea to display after the meditation timer completes.*/}
 

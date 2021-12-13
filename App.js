@@ -11,14 +11,34 @@ import MeditationBreathePage from './Pages/MeditationDetailPage/MeditationBreath
 import MeditatingBreathePage from './Pages/MeditatingPage/MeditatingBreathePage';
 import MeditatingMantraPage from './Pages/MeditatingPage/MeditatingMantraPage';
 import MeditatingRelaxPage from './Pages/MeditatingPage/MeditatingRelaxPage';
-
+import React, {useState} from "react";
 
 
 
 function App() {
-  let isLoggedIn = false;
+//   let isLoggedIn = false;
 
   
+// const [user, setUser] = useState({name:"", email:""});
+// const [error, setError] = useState("");
+
+// const Login = details => {
+//   console.log(details);
+
+// if(details.email == adminUser.email && details.password == adminUser.password){
+//   console.log("Logged in")
+//   setUser({
+//     name: details.name,
+//     email: details.email 
+//   });
+// }else{
+//   setError("Details do not match!");
+// }
+// }
+// const Logout = () =>{
+//   console.log("logout");
+//   setUser({name: "", email: ""})
+// }
 
   return (
     <div>
@@ -31,9 +51,11 @@ function App() {
       </Provider> */}
       
       <Routes>
-      <Route path = '/HomePage' element={<HomePage/>}/>
-      <Route path = '/LoginPage' element={<LoginPage/>}/>
+      <Route path = '/' element={<HomePage/>}/>
+    
+      <Route path = '/LoginPage' element={<LoginPage />}/>
       <Route path = '/RegistrationPage' element={<RegistrationPage/>}/>
+
       <Route path = '/MeditationList' element = {<MeditationList/>}/>
       <Route path = '/MeditationDetailPage' element = {<MeditationDetailPage/>}/>
       
@@ -45,7 +67,7 @@ function App() {
       <Route path = '/MeditatingRelaxPage' element = {<MeditatingRelaxPage/>}/>
       <Route path = '/MeditatingBreathePage' element = {<MeditatingBreathePage/>}/>
       </ Routes>
-     
+    
     </div>
   );
 }
