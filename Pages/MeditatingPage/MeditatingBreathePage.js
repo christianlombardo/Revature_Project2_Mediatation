@@ -5,7 +5,8 @@ import MeditationInstructions from "../../Components/Meditating/Instructions";
 import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
-
+import './style.css';
+import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 
 const MeditatingBreathePage = (props) => {
     
@@ -17,7 +18,7 @@ const MeditatingBreathePage = (props) => {
                 {/* <TimerDisplay />
                 <TimerButtons /> */}
                 
-                <TimerClass minutes="17" /> {/*minutes=props.minutes*/}
+                <TimerClass minutes="15" /> {/*minutes=props.minutes*/}
                 {/*meditation={props.meditation_id}*/}
                 {
                 // Dynamic Instructions
@@ -26,11 +27,15 @@ const MeditatingBreathePage = (props) => {
                     
                 }
                 {/* { props.instructions.map((instruction) => ) } */}
-                <div>Gently breathe deeply in air into your nose ...</div>
-                <div>feel your abdomen gently expand...</div>
-                <div>breathe out of your mouth and let it all go.</div>
-                <div>Gently repeat.</div>
 
+                <h1>Instructions for Breathing Style:</h1>
+                <ul class="list-group">
+                <li class="list-group-item">1. Gently breathe deeply in air into your nose ...</li>
+                <li class="list-group-item">2. feel your abdomen gently expand...</li>
+                <li class="list-group-item">3. breathe out of your mouth and let it all go.</li>
+                <li class="list-group-item">4. Gently repeat.</li>
+                </ul>
+                <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
                 {/* Diary Notes textarea to display after the meditation timer completes.*/}
 
                 {/* 

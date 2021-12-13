@@ -5,7 +5,9 @@ import MeditationInstructions from "../../Components/Meditating/Instructions";
 import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
+import './style.css';
 
+import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 
 const MeditatingMantraPage = (props) => {
     
@@ -17,7 +19,7 @@ const MeditatingMantraPage = (props) => {
                 {/* <TimerDisplay />
                 <TimerButtons /> */}
                 
-                <TimerClass minutes="17" /> {/*minutes=props.minutes*/}
+                <TimerClass minutes="15" /> {/*minutes=props.minutes*/}
                 {/*meditation={props.meditation_id}*/}
                 {
                 // Dynamic Instructions
@@ -26,11 +28,18 @@ const MeditatingMantraPage = (props) => {
                     
                 }
                 {/* { props.instructions.map((instruction) => ) } */}
-                <div>Take 3 relaxed deep breaths....</div>
-                <div>Close your eyes....</div>
-                <div>See yourself on the beach or somewhere in nature with waterfalls in the forest.</div>
-                <div>Softly repeat this manta: "I Am whole, calm, healthy, strong, caring, respectful, powerful and loving.</div>
 
+                <h1>Instructions for Mantra Style:</h1>
+                <ul class="list-group">
+                <li class="list-group-item">1. Take 3 relaxed deep breaths....</li>
+                <li class="list-group-item">2. Close your eyes....</li>
+                <li class="list-group-item">3. See yourself on the beach or somewhere in nature with waterfalls in the forest.</li>
+                <li class="list-group-item">4. Softly repeat this manta: "I Am whole, calm, healthy, strong, caring, respectful, powerful and loving" (This chant can be preformed in your mind and does not have to be these words, but what works for you!).</li>
+                <li class="list-group-item">5. Repeat till your mind is clear</li>
+                </ul>
+                <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
+
+  
                 {/* Diary Notes textarea to display after the meditation timer completes.*/}
 
                 {/* 

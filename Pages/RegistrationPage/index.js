@@ -75,8 +75,8 @@ const RegistrationPage = () => {
                                 <p className="text-white-50 mb-5">Please fillout the form the continue</p>
 
                                 <div className="form-outline form-white mb-4">
-                                    <input type="text" id="username" className="form-control form-control-lg" name="username" />
-                                    <label className="form-label" for="username" >Username</label>
+                                    <input type="text" id="name" className="form-control form-control-lg" name="name" />
+                                    <label className="form-label" for="username" >Name</label>
                                 </div>
 
                                 <div className="form-outline form-white mb-4">

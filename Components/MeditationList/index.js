@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './style.css';
 import mantras from '../../mantra.png';
-import breath from '../../breathing.png';
-import progressive from '../../progressiverelaxation.png';
+import breathe from '../../breathing.png';
+import relaxing from '../../progressiverelaxation.png';
 import MantraPageHeader from "../../Pages/MeditationDetailPage/MantraPageHeader";
 import MeditationDetailPage from "../../Pages/MeditationDetailPage";
     const MeditationList = () => {
@@ -14,7 +14,7 @@ import MeditationDetailPage from "../../Pages/MeditationDetailPage";
             {
                 id: 1,
                 name: 'Mantra Meditation',
-                image: mantras,
+            
                 shortDescription: 'Meant for relaxation and to increase focus through repetition of a mantra',
                 longDiscription: 'Mentra meditation is the reciting of a word or phrase. This can be done either outloud or in the mind.',
                 timespend: 30,
@@ -32,7 +32,7 @@ import MeditationDetailPage from "../../Pages/MeditationDetailPage";
         
             id: 2,
             name: 'Progressive Relaxation',
-            image: progressive,
+
             shortDescription: 'Brief description',
             longDiscription: 'this is a long and detailed discription',
             timespend: 55,
@@ -56,7 +56,7 @@ import MeditationDetailPage from "../../Pages/MeditationDetailPage";
         {
             id: 3,
             name: 'Breathing Meditation',
-            image: breath,
+         
             shortDescription: 'Brief description',
             longDiscription: 'this is a long and detailed discription',
             timespend: 20,
@@ -79,29 +79,29 @@ let name = 'mario';
             <div>
               
                     <div className = "mappingDiv">
-                        <h3 className = "meditationName">{mantra.name}</h3>
-                        <img className = "meditationImage" src = {mantra.image} alt = "oop" />
-                        <p className = "meditationShortDescription">{mantra.shortDescription}</p>
-                        <p className = "meditationTimespend">You’ve spent {mantra.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
+                        <h3 className = "meditationName">Mantra Meditation</h3>
+                        <img className = "meditationImage" src = {mantras} alt = "oop" />
+                        <p className = "meditationShortDescription">Meant for relaxation and to increase focus through repetition of a mantra</p>
+                        {/*<p className = "meditationTimespend">You’ve spent {mantra.timespend} minutes time in this style.</p>*/}
+                        <Link to= '/MeditationMantraPage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
 
                     <div className = "mappingDiv">
-                        <h3 className = "meditationName">{relax.name}</h3>
-                        <img className = "meditationImage" src = {relax.image} alt = "oop" />
-                        <p className = "meditationShortDescription">{relax.shortDescription}</p>
-                        <p className = "meditationTimespend">You’ve spent {relax.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
+                        <h3 className = "meditationName">Progressive Relaxation</h3>
+                        <img className = "meditationImage" src = {relaxing} alt = "oop" />
+                        <p className = "meditationShortDescription">Consciously taking control of your body through a relaxtion of the muscles</p>
+                        {/*<p className = "meditationTimespend">You’ve spent {relax.timespend} minutes time in this style.</p>*/}
+                        <Link to= '/MeditationRelaxPage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
 
                     <div className = "mappingDiv">
-                        <h3 className = "meditationName">{breathing.name}</h3>
-                        <img className = "meditationImage" src = {breathing.image} alt = "oop" />
-                        <p className = "meditationShortDescription">{breathing.shortDescription}</p>
-                        <p className = "meditationTimespend">You’ve spent {breathing.timespend} minutes time in this style.</p>
-                        <Link to= '/MeditationDetailPage' className = "meditationLink" >Click to view more </Link>
+                        <h3 className = "meditationName">Breathing Meditation</h3>
+                        <img className = "meditationImage" src = {breathe} alt = "oop" />
+                        <p className = "meditationShortDescription">Calming the mind through a focus on nothing but your breathing</p>
+                        {/*<p className = "meditationTimespend">You’ve spent {breathing.timespend} minutes time in this style.</p>*/}
+                        <Link to= '/MeditationBreathePage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
             </div>

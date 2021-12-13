@@ -4,21 +4,26 @@ import HomePage from './Pages/HomePage';
 import MeditationDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
 import RegistrationPage from './Pages/RegistrationPage';
-import MeditatingPage from './Pages/MeditatingPage';
 import MeditationList from './Components/MeditationList';
 import MeditationRelaxPage from './Pages/MeditationDetailPage/MeditationRelaxPage';
 import MeditationMantraPage from './Pages/MeditationDetailPage/MeditationMantraPage';
-import MeditationBreathingPage from './Pages/MeditationBreathingPage';
+import MeditationBreathePage from './Pages/MeditationDetailPage/MeditationBreathePage';
+import MeditatingBreathePage from './Pages/MeditatingPage/MeditatingBreathePage';
+import MeditatingMantraPage from './Pages/MeditatingPage/MeditatingMantraPage';
+import MeditatingRelaxPage from './Pages/MeditatingPage/MeditatingRelaxPage';
 
 
-// Redux
 
-import store from './store/index' 
 
 function App() {
+  let isLoggedIn = false;
+
+  
+
   return (
     <div>
-     
+    
+
       <Navbar />
      
       {/* <Provider store={store}>
@@ -35,6 +40,10 @@ function App() {
       <Route path = '/MeditationRelaxPage' element = {<MeditationRelaxPage/>}/>
       <Route path = '/MeditationMantraPage' element = {<MeditationMantraPage/>}/>
       <Route path = '/MeditationBreathePage' element = {<MeditationBreathePage/>}/>
+
+      <Route path = '/MeditatingMantraPage' element = {<MeditatingMantraPage/>}/>
+      <Route path = '/MeditatingRelaxPage' element = {<MeditatingRelaxPage/>}/>
+      <Route path = '/MeditatingBreathePage' element = {<MeditatingBreathePage/>}/>
       </ Routes>
      
     </div>

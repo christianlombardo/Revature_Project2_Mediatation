@@ -1,18 +1,23 @@
 import React from 'react'
+import mantras from '../../mantra.png';
+import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+import './style.css'
 
-const MeditationMantraPage = (props) => {
+const MeditationMantraPage = () => {
     return (
-        <div>
-            <header>
-        <p></p>
-       {/*<img src={props.image} className = "meditationDetail" alt="oop" />*/}
-      </header>
+        <div className = "wrappingMeditation">
+        <div className = "mappingDiv">
+           
+       <img src={mantras} className = "meditationImage" alt="oop" />
+     
         <body>
-            <p></p>
-       <h1 className = "title">{props.name}</h1>
-       <h3 className = "discriptionHomePage">
+          
+       <h1 className = "title">Mantra Meditation</h1>
+       <h3 className = "meditationLongDescription">Mentra meditation is the reciting of a word or phrase. This can be done either outloud or in the mind. People do mantra meditation for different reasons. For some, it serves as a kind of mental protection against unwelcome distractions or emotions, as when battling sleeplessness or coping with fears associated with travel.  
        </h3>
+       <Link to= '/MeditatingMantraPage' className = "meditationLink" >Start Meditation</Link>
        </body>
+        </div>
         </div>
     )
 }
