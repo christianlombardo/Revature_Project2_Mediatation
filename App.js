@@ -1,5 +1,5 @@
 import {Route, Routes, Link} from 'react-router';
-import Navbar from './Components/NavbarHome';
+import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import MeditationDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
@@ -12,8 +12,6 @@ import MeditatingBreathePage from './Pages/MeditatingPage/MeditatingBreathePage'
 import MeditatingMantraPage from './Pages/MeditatingPage/MeditatingMantraPage';
 import MeditatingRelaxPage from './Pages/MeditatingPage/MeditatingRelaxPage';
 import React, {useState} from "react";
-import JournalPage from './Pages/JournalPage';
-import './App.css'
 
 
 
@@ -43,19 +41,18 @@ function App() {
 // }
 
   return (
-    <div className = "programwrapper">
+    <div>
     
 
-      
+      <Navbar />
      
       {/* <Provider store={store}>
         <MeditatingPage />
       </Provider> */}
       
       <Routes>
-      <Route path ='/NotLoggedNavbar'/>
       <Route path = '/' element={<HomePage/>}/>
-      
+    
       <Route path = '/LoginPage' element={<LoginPage />}/>
       <Route path = '/RegistrationPage' element={<RegistrationPage/>}/>
 
@@ -69,8 +66,6 @@ function App() {
       <Route path = '/MeditatingMantraPage' element = {<MeditatingMantraPage/>}/>
       <Route path = '/MeditatingRelaxPage' element = {<MeditatingRelaxPage/>}/>
       <Route path = '/MeditatingBreathePage' element = {<MeditatingBreathePage/>}/>
-      <Route path = '/JournalPage' element ={<JournalPage />}/>
-
       </ Routes>
     
     </div>
