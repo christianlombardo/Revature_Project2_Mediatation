@@ -105,7 +105,7 @@ const TimerClass = (props) => {
     }    
 
     return (
-        <div>
+        <div className = "wrapperpages">
             <h1>{`${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</h1>
             {/* <h1 value={minutes}>{minutes}:00</h1> */}
         </div>

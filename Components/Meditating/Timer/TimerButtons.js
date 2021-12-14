@@ -19,7 +19,7 @@ const TimerButtons = (props) => {
     }
 
     return (
-        <div>
+        <div className = "wrapperpages">
             <button onClick={incrementHandler} className="btn btn-primary">+ Time</button>
             <button onClick={decrementHandler} className="btn btn-danger">- Time</button>
             <br />

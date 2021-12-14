@@ -76,7 +76,7 @@ let name = 'mario';
 
 
         return (
-            <div>
+            <div className = "wrapperpages">
               
                     <div className = "mappingDiv">
                         <h3 className = "meditationName">Mantra Meditation</h3>

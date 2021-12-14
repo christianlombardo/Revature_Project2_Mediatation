@@ -23,7 +23,7 @@ const MeditatingBreathePage = (props) => {
 
 
     return(
-        <div>
+        <div className = "wrapperpages">
             <div className="container text-center">
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
                 {/* <TimerDisplay />

@@ -4,16 +4,16 @@ const JournalPage = () => {
 
     let[responseData, setResponseData] = React.useState('')
 
-    const getList = (e) =>{
-        Axios.getData("http://localhost:9001/users/login",{
-        .then((response) =>{
-            setResponseData(response.data)
-        }).catch((error)=>{
-            console.log(error)
-        })
+  //  const getList = (e) =>{
+    //    Axios.getData("http://localhost:9001/users/login",{
+        //.then((response) =>{
+        //     setResponseData(response.data)
+        // }).catch((error)=>{
+        //     console.log(error)
+        // })
         
-    }
-};
+  //  }
+//};
 
     return (
         <div>

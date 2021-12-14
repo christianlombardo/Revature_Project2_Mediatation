@@ -11,7 +11,7 @@ const HomePage = () => {
 
     return (
          
-        <div>
+        <div className='wrapperpages'>
             <header>
             <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/>
             </header>
