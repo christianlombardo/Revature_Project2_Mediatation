@@ -1,6 +1,7 @@
 package com.revature.springrestapi.entity;
 
 import lombok.*;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 
@@ -61,11 +62,11 @@ public class User {
         this.meditationInterests = meditationInterests;
     }
 
-//    public Meditation getMeditation() {
-//        return meditation;
-//    }
-//
-//    public void setMeditation(Meditation meditation) {
-//        this.meditation = meditation;
-//    }
+    public Meditation getMeditation() {
+        return meditation;
+    }
+
+    public void setMeditation(Meditation meditation) {
+        this.meditation = meditation;
+    }
 }

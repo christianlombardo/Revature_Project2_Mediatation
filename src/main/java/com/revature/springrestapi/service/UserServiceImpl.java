@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
         userdb.setName(updateUser.getName());
         userdb.setEmail(updateUser.getEmail());
         userdb.setPassword(updateUser.getPassword());
-       // userdb.setMeditation(updateUser.getMeditation());
+        userdb.setMeditation(updateUser.getMeditation());
         return repository.save(userdb);  //  Calling save() on an object with predefined id will update the corresponding database record rather than insert a new one.
     }
 
@@ -50,9 +50,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void userRegister(User user) {
-        //repository.userRegister(20, user.getEmail(), false, 0, "", user.getMeditationInterests(), user.getName(), user.getPassword());
+        user.setMeditation(new Meditation());  // You have to place an empty object when not collecting from user because Spring does not put in empty object for you.
         repository.save(user);
-        // userRegister(String email, boolean favorite, String meditationTime, String meditationName, String meditationInterests, String name, String password);
     }
 
     @Override
