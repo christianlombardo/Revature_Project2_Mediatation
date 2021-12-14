@@ -1,29 +1,30 @@
 import React, {useState} from "react"
 import Navbar from '../../Components/Navbar';
 import './style.css';
-import Axios from 'axios';
+import axios from 'axios';
 
 
 const LoginPage = () => {
 
-  const [details, setDetails] = useState({email: "", password : ""});
+  const [user, setUser] = useState({
+                                email: '',
+                                password : ''
+                            });
 
-  const submitHandler = e => {
-    Axios.get("http://localhost:9001/users/login",{
-        email: details.email,
-        password: details.password,
-        entry: details.entry,
-
-    }).then((response) =>{
-        console.log(response);
-    }).catch((error) =>{
-        
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(user);
+    axios.post("http://localhost:9001/users/login", user)
+    .then((response) => {
+        console.log(response.data);
+    }).catch((error) => {
+        console.log(error)
     })
 };
 
 function onChangeHandler(event){
     //console.log(event.target.name)
-    setDetails({...details,
+    setUser({...user,
         [event.target.name]: event.target.value
     })
 }
@@ -34,6 +35,7 @@ function onChangeHandler(event){
             <div className = "registrationWrapper ">  
                 <section className="vh-100 gradient-custom">
                     <div className="container py-5 h-100">
+                        {user.email} , {user.password}
                         <div className="row d-flex justify-content-center align-items-center h-100">
                             <div className="col-12 col-md-9 col-lg-5 col-xl-5">
                                 <div className="card bg-primary text-white">
@@ -45,13 +47,13 @@ function onChangeHandler(event){
                                             <p className="text-white-50 mb-5">Please enter your email and password</p>
 
                                             <div className="form-outline form-white mb-4">
-                                                <input type="text" id="username" className="form-control form-control-lg" name="username" onChange = {onChangeHandler} value ={details.name}/>
-                                                <label className="form-label" for="username" >Email</label>
+                                                <input type="text" id="username" className="form-control form-control-lg" name="email" onChange = {onChangeHandler} value ={user.email}/>
+                                                <label className="form-label" htmlFor="username" >Email</label>
                                             </div>
 
                                             <div className="form-outline form-white mb-4">
-                                                <input type="password" id="password" className="form-control form-control-lg" name="password" onChange = {onChangeHandler} value ={details.password}/>
-                                                <label className="form-label" for="password">Password</label>
+                                                <input type="password" id="password" className="form-control form-control-lg" name="password" onChange = {onChangeHandler} value ={user.password}/>
+                                                <label className="form-label" htmlFor="password">Password</label>
                                             </div>
 
                                             <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "login">Login</button>

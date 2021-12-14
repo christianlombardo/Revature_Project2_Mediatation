@@ -44,7 +44,7 @@ const RegistrationPage = () => {
         <form className="regFormWapper" onSubmit={registerHandler}>
             <section className="vh-100 gradient-custom">
                 <div className="container py-5 h-100">
-                {user.name} , {user.email} , {user.password} , {user.entry}
+                {/* {user.name} , {user.email} , {user.password} , {user.entry} */}
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-12 col-md-9 col-lg-5 col-xl-5">
                             <div className="card bg-primary text-white">
