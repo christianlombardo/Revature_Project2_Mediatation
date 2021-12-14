@@ -33,8 +33,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(Long id, User updateUser) {
-        User userdb = repository.getById(id);
-//        return repository.getById(id);
+        User userdb = repository.getById(id);   // return repository.getById(id);
         userdb.setId(id);
         userdb.setName(updateUser.getName());
         userdb.setEmail(updateUser.getEmail());

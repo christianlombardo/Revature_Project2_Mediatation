@@ -22,6 +22,8 @@ public class User {
     @Embedded
     private Meditation meditation;
 
+
+
     public Long getId() {
         return id;
     }

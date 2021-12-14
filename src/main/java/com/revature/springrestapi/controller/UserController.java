@@ -24,7 +24,7 @@ public class UserController {
         return service.getUserById(id);
     }
 
-    @GetMapping("/users/login")
+    @PostMapping("/users/login")
     public User userLogin(@RequestBody User user){
         return service.userLogin(user);
     }
@@ -35,6 +35,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
+    @ResponseBody
     public User addEmployee(@RequestBody User user){
         return service.saveUser(user);
     }
