@@ -41,6 +41,7 @@ const RegistrationPage = () => {
     };
 
     return (
+        <div>
         <form className="regFormWapper" onSubmit={registerHandler}>
             <section className="vh-100 gradient-custom">
                 <div className="container py-5 h-100">
@@ -85,6 +86,7 @@ const RegistrationPage = () => {
                 </div>
             </section>
         </form>
+        </div>
     )
 }
 

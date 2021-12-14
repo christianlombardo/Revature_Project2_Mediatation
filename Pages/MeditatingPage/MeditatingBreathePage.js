@@ -8,8 +8,10 @@ import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Axios from 'axios';
+import NavbarLogged from "../../Components/NavbarLogged";
 
-const MeditatingBreathePage = (props) => {
+
+const MeditatingBreathePage = (post) => {
     
 
     const submitHandler = e => {
@@ -24,6 +26,7 @@ const MeditatingBreathePage = (props) => {
 
     return(
         <div className = "wrapperpages">
+          <NavbarLogged />
             <div className="container text-center">
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
                 {/* <TimerDisplay />

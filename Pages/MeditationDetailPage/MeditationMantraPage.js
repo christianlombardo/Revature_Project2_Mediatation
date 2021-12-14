@@ -1,11 +1,13 @@
 import React from 'react'
 import mantras from '../../mantra.png';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
-import './style.css'
+import './style.css';
+import NavbarLogged from '../../Components/NavbarLogged';
 
 const MeditationMantraPage = () => {
     return (
         <div className = "wrapperpages">
+            <NavbarLogged />
         <div className = "mappingDiv">
            
        <img src={mantras} className = "meditationImage" alt="oop" />

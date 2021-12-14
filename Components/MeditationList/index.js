@@ -6,6 +6,8 @@ import breathe from '../../breathing.png';
 import relaxing from '../../progressiverelaxation.png';
 import MantraPageHeader from "../../Pages/MeditationDetailPage/MantraPageHeader";
 import MeditationDetailPage from "../../Pages/MeditationDetailPage";
+import NavbarLogged from "../NavbarLogged";
+
     const MeditationList = () => {
 
         // Data from the source database, JSON, etc......
@@ -77,6 +79,7 @@ let name = 'mario';
 
         return (
             <div className = "wrapperpages">
+                <NavbarLogged />
               
                     <div className = "mappingDiv">
                         <h3 className = "meditationName">Mantra Meditation</h3>

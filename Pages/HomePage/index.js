@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar'
+import Navbar from '../../Components/NavbarHome'
 import RegistrationPage from '../RegistrationPage';
 import LoginPage from '../LoginPage';
 import MeditationListPage from '../MeditationListPage';
 import logo from '../../Homepage.png';
 import './style.css'
+import LoggedNavbar from '../../Components/NavbarHome/LoggedNavbar';
+import NavbarHome from '../../Components/NavbarHome';
 
 const HomePage = () => {
 
@@ -12,6 +14,7 @@ const HomePage = () => {
     return (
          
         <div className='wrapperpages'>
+            <NavbarHome />
             <header>
             <img src={logo} className = "picture" alt="oop" height = "600px" width = "50%"/>
             </header>

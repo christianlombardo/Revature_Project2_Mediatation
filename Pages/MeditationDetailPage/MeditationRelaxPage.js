@@ -2,12 +2,14 @@ import React from 'react'
 import reactDom from 'react-dom';
 import relaxing from '../../progressiverelaxation.png';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
-import './style.css'
+import './style.css';
+import NavbarLogged from '../../Components/NavbarLogged';
 
 
 const MeditationRelaxPage = () => {
     return (
         <div className='wrapperpages'>
+            <NavbarLogged />
 <div className = "mappingDiv">
         
        <img src={relaxing} className = "meditationImage" alt="oop" />

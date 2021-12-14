@@ -5,14 +5,10 @@ import {Link} from 'react-router-dom';
 import LoggedNavbar from './LoggedNavbar';
 import NotLoggedNavbar from './NotLoggedNavbar';
 
-const Navbar = () => {
-//if(props.isLoggedIn===true){
+const NavbarHome = () => {
 
-   // return <LoggedNavbar />
-//}
-//return <NotLoggedNavbar />
-    
-//}
+
+
 return(
 <div className = "navWrapper">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -20,9 +16,12 @@ return(
     <a className="navbar-brand">Reconnect</a>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
+        
         <Link className="nav-link active" aria-current="page" to = '/'>Home</Link>
         <Link className="nav-link active" aria-current="page" to = '/RegistrationPage'>Create an account</Link>
         <Link className="nav-link active" aria-current="page" to = '/LoginPage'>Login</Link>
+       
+        
       </div>
     </div>
   </div>
@@ -30,4 +29,4 @@ return(
 </div>
 )
 }
-export default Navbar;
+export default NavbarHome;

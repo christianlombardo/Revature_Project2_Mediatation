@@ -2,10 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import breathe from '../../breathing.png';
 import './style.css'
+import NavbarLogged from '../../Components/NavbarLogged';
 
 const MeditationBreathePage = () => {
     return (
+        
         <div className='wrapperpages'>
+           <NavbarLogged />
         <div className = "mappingDiv">
       
        <img src={breathe} className = "meditationImage" alt="oop" />
