@@ -5,6 +5,7 @@ import './style.css'
 
 const MeditationBreathePage = () => {
     return (
+        <div className='wrapperpages'>
         <div className = "mappingDiv">
       
        <img src={breathe} className = "meditationImage" alt="oop" />
@@ -16,6 +17,7 @@ const MeditationBreathePage = () => {
        </h3>
        <Link to= '/MeditatingBreathePage' className = "meditationLink" >Start Meditation</Link>
        </body>
+        </div>
         </div>
     )
 }

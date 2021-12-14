@@ -5,7 +5,7 @@ import './style.css'
 
 const MeditationMantraPage = () => {
     return (
-        <div className = "wrappingMeditation">
+        <div className = "wrapperpages">
         <div className = "mappingDiv">
            
        <img src={mantras} className = "meditationImage" alt="oop" />

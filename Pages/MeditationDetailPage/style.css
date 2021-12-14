@@ -16,7 +16,7 @@
    margin: auto;
    font-size: 75px;
    text-align: center;
-   
+   background-color: #23B5C9;
 }
 
 .meditationImage{
@@ -34,7 +34,7 @@
     text-align: center;
     padding: 10px 400px;
     text-align: left;
-
+    background-color: #23B5C9;
 }
 
 .meditationTimespend{
@@ -47,6 +47,6 @@
     text-align: center;
     font-size: 200%;
     padding: 10px 400px;
-   
+   background-color: #23B5C9;
 
 }
