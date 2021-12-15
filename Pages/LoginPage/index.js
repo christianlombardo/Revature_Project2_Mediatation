@@ -7,7 +7,7 @@ import Logout from "../../Components/Logout";
 
 
 const LoginPage = (props) => {
-    
+
     if(props.Logout == "Logout"){
         setUser({
            email: '',
@@ -68,7 +68,7 @@ const LoginPage = (props) => {
 
     if (userResponse.email === user.email && userResponse.password === user.password) {
         // logged in
-        return(<MeditationListPage />);
+        return(<MeditationListPage user = {userResponse}/>);
     }
     else {
         //console.log('check username password');

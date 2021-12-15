@@ -8,7 +8,7 @@ import MantraPageHeader from "../../Pages/MeditationDetailPage/MantraPageHeader"
 import MeditationDetailPage from "../../Pages/MeditationDetailPage";
 import NavbarLogged from "../NavbarLogged";
 
-    const MeditationList = () => {
+    const MeditationList = (user) => {
 
         // Data from the source database, JSON, etc......
         const [mantra, setMantra] = useState ([
@@ -107,6 +107,8 @@ let name = 'mario';
                         <Link to= '/MeditationBreathePage' className = "meditationLink" >Click to view more </Link>
                         <br /><br />
                     </div>
+
+                    
             </div>
         )
 

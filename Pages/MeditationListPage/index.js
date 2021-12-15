@@ -1,10 +1,10 @@
 import React from 'react'
 import MeditationList from '../../Components/MeditationList'
 
-const MeditationListPage = () => {
+const MeditationListPage = (user) => {
     return (
         
-            <MeditationList />
+            <MeditationList user = {user}/>
         
         )
 }
