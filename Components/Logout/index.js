@@ -18,7 +18,7 @@ const Logout = () => {
 
     return (
         <div>
-            email = {LoginPage.user.email} password = {LoginPage.user.password}
+           <LoginPage Logout="Logout" />
         </div>
     )
 

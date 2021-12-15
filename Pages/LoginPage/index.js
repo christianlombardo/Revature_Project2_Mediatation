@@ -2,9 +2,10 @@ import React, {useState} from "react"
 import './style.css';
 import axios from 'axios';
 import MeditationListPage from "../MeditationListPage";
+import NavbarHome from "../../Components/NavbarHome";
 
 
-const LoginPage = () => {
+const LoginPage = (props) => {
 
   const [user, setUser] = useState({
         email: '',
@@ -18,6 +19,12 @@ const LoginPage = () => {
         password : 'initialpassword'
     });
 
+    if(props.Logout == true){
+        setUser({
+           email: '',
+           password : ''
+        })
+    }
 
   const submitHandler = (e) => {
         e.preventDefault();
@@ -62,7 +69,10 @@ const LoginPage = () => {
     }
     else {
         //console.log('check username password');
+
+       
         return (
+            <div> <NavbarHome/>
                 <form onSubmit = {submitHandler}>
                     <div className = "registrationWrapper ">  
                         <section className="vh-100 gradient-custom">
@@ -98,6 +108,7 @@ const LoginPage = () => {
                     </section>
                     </div>
                 </form>
+                </div>
             )
     }
 

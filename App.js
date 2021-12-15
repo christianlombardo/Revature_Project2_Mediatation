@@ -1,5 +1,4 @@
 import {Route, Routes, Link} from 'react-router';
-import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import MeditationDetailPage from './Pages/MeditationDetailPage';
 import LoginPage from './Pages/LoginPage';
@@ -44,7 +43,7 @@ function App() {
     <div>
     
 
-      <Navbar />
+    
      
       {/* <Provider store={store}>
         <MeditatingPage />

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './style.css'
+import NavbarHome from '../../Components/NavbarHome';
 
 
 const initialState = {
@@ -42,6 +43,7 @@ const RegistrationPage = () => {
 
     return (
         <div>
+            <NavbarHome />
         <form className="regFormWapper" onSubmit={registerHandler}>
             <section className="vh-100 gradient-custom">
                 <div className="container py-5 h-100">
