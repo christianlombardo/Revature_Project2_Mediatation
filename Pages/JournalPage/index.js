@@ -8,10 +8,8 @@ const JournalPage = () => {
 
 
     const initialState = {
-        name: '',
-        email: '',
-        password: '',
-        meditationInterests: ''
+        Id:null,
+        Entry:''
     }
 
     const [responseData, setResponseData] = useState({

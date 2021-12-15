@@ -56,7 +56,6 @@ const MeditatingMantraPage = (props) => {
                 </div>
                 <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
                 </form>
-                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
                 <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
 

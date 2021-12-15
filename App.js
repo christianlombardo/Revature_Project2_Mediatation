@@ -12,6 +12,7 @@ import MeditatingMantraPage from './Pages/MeditatingPage/MeditatingMantraPage';
 import MeditatingRelaxPage from './Pages/MeditatingPage/MeditatingRelaxPage';
 import Logout from './Components/Logout';
 import React, {useState} from "react";
+import JournalPage from './Pages/JournalPage';
 
 
 
@@ -67,7 +68,10 @@ function App() {
       <Route path = '/MeditatingMantraPage' element = {<MeditatingMantraPage/>}/>
       <Route path = '/MeditatingRelaxPage' element = {<MeditatingRelaxPage/>}/>
       <Route path = '/MeditatingBreathePage' element = {<MeditatingBreathePage/>}/>
-      </ Routes>
+
+      <Route path = '/JournalPage' element = {<JournalPage/>}/>
+
+      </Routes>
     
     </div>
   );
