@@ -7,6 +7,13 @@ import Logout from "../../Components/Logout";
 
 
 const LoginPage = (props) => {
+    
+    if(props.Logout == "Logout"){
+        setUser({
+           email: '',
+           password : ''
+        })
+    }
 
   const [user, setUser] = useState({
         email: '',
@@ -20,12 +27,7 @@ const LoginPage = (props) => {
         password : 'initialpassword'
     });
 
-    if(props.Logout == "Logout"){
-        setUser({
-           email: '',
-           password : ''
-        })
-    }
+   
 
   const submitHandler = (e) => {
         e.preventDefault();

@@ -10,6 +10,7 @@ import MeditationBreathePage from './Pages/MeditationDetailPage/MeditationBreath
 import MeditatingBreathePage from './Pages/MeditatingPage/MeditatingBreathePage';
 import MeditatingMantraPage from './Pages/MeditatingPage/MeditatingMantraPage';
 import MeditatingRelaxPage from './Pages/MeditatingPage/MeditatingRelaxPage';
+import Logout from './Components/Logout';
 import React, {useState} from "react";
 
 
@@ -52,6 +53,7 @@ function App() {
       <Routes>
       <Route path = '/' element={<HomePage/>}/>
     
+      <Route path = '/Logout' element = {<Logout />}/>
       <Route path = '/LoginPage' element={<LoginPage />}/>
       <Route path = '/RegistrationPage' element={<RegistrationPage/>}/>
 

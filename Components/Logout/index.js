@@ -15,10 +15,12 @@ const Logout = () => {
     //     email: '',
     //     password : ''
     // });
-
+    const onClickHandler = (e) =>{
+<LoginPage Logout="Logout" />
+    }
     return (
         <div>
-           <LoginPage Logout="Logout" />
+           <button className="" onClick = {onClickHandler}>Logout</button>
         </div>
     )
 
