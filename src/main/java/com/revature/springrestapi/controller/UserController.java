@@ -1,5 +1,6 @@
 package com.revature.springrestapi.controller;
 
+import com.revature.springrestapi.entity.Journal;
 import com.revature.springrestapi.entity.User;
 import com.revature.springrestapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public User getEmployee(@PathVariable("id") long id){
+    public User getUser(@PathVariable("id") long id){
         return service.getUserById(id);
     }
 

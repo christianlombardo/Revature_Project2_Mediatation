@@ -1,5 +1,6 @@
 package com.revature.springrestapi.service;
 
+import com.revature.springrestapi.entity.Journal;
 import com.revature.springrestapi.entity.Meditation;
 import com.revature.springrestapi.entity.User;
 import com.revature.springrestapi.repository.UserRepository;

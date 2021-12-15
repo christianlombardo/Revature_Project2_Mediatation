@@ -27,8 +27,8 @@ public class Meditation {
     private String meditationname;
     private boolean favorite;
     private int meditationTime;
-    @ElementCollection
-    private List<String> diaryNotes;
+//    @ElementCollection
+//    private List<String> journalnotes;
 
     public String getName() {
         return meditationname;
@@ -54,11 +54,11 @@ public class Meditation {
         this.meditationTime = meditationTime;
     }
 
-    public List<String> getDiaryNotes() {
-        return diaryNotes;
-    }
-
-    public void setDiaryNotes(List<String> diaryNotes) {
-        this.diaryNotes = diaryNotes;
-    }
+//    public List<String> getDiaryNotes() {
+//        return diaryNotes;
+//    }
+//
+//    public void setDiaryNotes(List<String> diaryNotes) {
+//        this.diaryNotes = diaryNotes;
+//    }
 }
