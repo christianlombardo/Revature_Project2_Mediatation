@@ -14,9 +14,11 @@ public class JournalController {
     @Autowired
     private JournalService service;
 
-    @PostMapping("/journals")// @RequestBody User user
-//    public List<Journal> getAllJournals(@PathVariable ("userid") long userid){
-    public List<Journal> getAllJournals(@RequestBody long userid){
+//    @PostMapping("/journals")// @RequestBody User user
+//    @GetMapping("/journals/{userid}")// @RequestBody User user
+    @PostMapping("/journals/{userid}")// @RequestBody User user
+    public List<Journal> getAllJournals(@PathVariable ("userid") long userid){
+//    public List<Journal> getAllJournals(@RequestBody long userid){
         return service.getAllJournals(userid);
     }
 
