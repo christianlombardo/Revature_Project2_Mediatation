@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}  from "react";
 import { Provider } from "react-redux";
 import FavoriteButton from "../../Components/Meditating/FavoriteButton";
 import MeditationInstructions from "../../Components/Meditating/Instructions";
@@ -7,24 +7,47 @@ import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css';
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
-import Axios from 'axios';
+import axios from 'axios';
 import NavbarLogged from "../../Components/NavbarLogged";
+import { useSelector } from 'react-redux';
 
 
 const MeditatingBreathePage = (post) => {
     
+    const user = useSelector(state => state.user);
 
-    const submitHandler = e => {
-        Axios.post("https://localhost9001/",{
-          
+    console.log("MeditatingBreathePage ==================")
+    console.log(user);
 
-        }).then((response) =>{
+
+    const [journal, setJournal] = useState({
+        userid: user.id,
+        journalnotes : ''
+    });
+
+
+    function onChangeHandler(event){
+        //console.log(event.target.name)
+        setJournal({...journal,
+            [event.target.name]: event.target.value
+        });
+        console.log("onChangeHandler ========================");
+        console.log(journal)
+    }
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(journal);
+        axios.post("http://localhost:9001/users/journal", journal)
+        .then((response) => {
             console.log(response);
         });
     };
 
-
+    
     return(
+        
         <div className = "wrapperpages">
           <NavbarLogged />
             <div className="container text-center">
@@ -51,17 +74,16 @@ const MeditatingBreathePage = (post) => {
                 </ul>
 
                 <form onSubmit = {submitHandler}>
-                <br></br>
-                <div class="form-group">
-                <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                    <br></br>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1"  name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
+                    </div>
+                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} >Submit Entry</button>
                 </form>
 
-               
                 <br></br>
-                <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
+                <Link to= '/MeditationList' className="lastLink">Go to List of Meditations</Link>
                 {/* Diary Notes textarea to display after the meditation timer completes.*/}
 
                 {/* 

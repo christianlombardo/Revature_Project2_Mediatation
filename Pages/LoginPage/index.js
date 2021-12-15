@@ -3,6 +3,7 @@ import './style.css';
 import axios from 'axios';
 import MeditationListPage from "../MeditationListPage";
 import NavbarHome from "../../Components/NavbarHome";
+import { useDispatch } from 'react-redux';
 import Logout from "../../Components/Logout";
 
 
@@ -23,11 +24,15 @@ const LoginPage = (props) => {
     const [userResponse, setUserResponse] = useState({
         id: 0,
         name: '',
-        email: 'initialemail',
-        password : 'initialpassword'
+        email: 'initialemailcoooliomon',
+        password : 'initialpasswordcooooooliomon'
     });
 
-   
+    const dispatch = useDispatch();
+
+    const setUserHandler = () => {
+        dispatch({type: userResponse})
+    }
 
   const submitHandler = (e) => {
         e.preventDefault();
@@ -41,6 +46,9 @@ const LoginPage = (props) => {
                 email: response.data.email,
                 password: response.data.password
             });
+            // console.log("user Response ====== ");
+            // console.log(userResponse);
+            // setUserHandler();
             // if (response.data.email === user.email && response.data.password === user.password) {
             //     // logged in
             //     console.log("Successfully Logged In " + userResponse.name);
@@ -52,7 +60,7 @@ const LoginPage = (props) => {
             //(response.data.email === user.email && response.data.password === user.password ? console.log("Successfully Logged In " + userResponse.name) : console.log('check username password'));
             // (response.data.email === user.email && response.data.password === user.password ? <MeditationListPage /> : console.log('check username password'));
 
-            console.log(userResponse);
+            //console.log(userResponse);
             
         }).catch((error) => {
             console.log(error)
@@ -68,15 +76,17 @@ const LoginPage = (props) => {
 
     if (userResponse.email === user.email && userResponse.password === user.password) {
         // logged in
+        console.log("userResponse MeditationListPage")
+        console.log(userResponse);
+        setUserHandler();
         return(<MeditationListPage user = {userResponse}/>);
     }
     else {
         //console.log('check username password');
 
-       
         return (
             <div> <NavbarHome/>
-                <form onSubmit = {submitHandler}>
+                <form onSubmit={submitHandler}>
                     <div className = "registrationWrapper ">  
                         <section className="vh-100 gradient-custom">
                             <div className="container py-5 h-100">

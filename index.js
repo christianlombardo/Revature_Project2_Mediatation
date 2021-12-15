@@ -7,15 +7,18 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 //import { Provider } from 'react-redux';
 //import {createStore} from 'redux';
-//import stores from '/store';
+
+// Redux
+import { Provider} from 'react-redux';
+import store from './store/index';
 
 
 ReactDOM.render(
   <BrowserRouter >
-  {/*<Provider stores = {stores}>
-   
-</Provider>*/}
-    <App />
+  <Provider store={store}>
+    <App /> 
+  </Provider>
+    {/* <App /> */}
     </BrowserRouter>,
   document.getElementById('root')
 );
