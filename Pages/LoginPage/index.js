@@ -3,6 +3,7 @@ import './style.css';
 import axios from 'axios';
 import MeditationListPage from "../MeditationListPage";
 import NavbarHome from "../../Components/NavbarHome";
+import Logout from "../../Components/Logout";
 
 
 const LoginPage = (props) => {
@@ -19,7 +20,7 @@ const LoginPage = (props) => {
         password : 'initialpassword'
     });
 
-    if(props.Logout == true){
+    if(props.Logout == "Logout"){
         setUser({
            email: '',
            password : ''

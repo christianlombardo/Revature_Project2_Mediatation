@@ -15,6 +15,7 @@ const NavbarLogged = () => {
 
           <Link className ="nav-link active" aria-current="page" to = '/MeditationList'>Meditation List</Link>
       <Link className = "nav-link active" aria-current="page" to = '/JournalEntry'>See Journal</Link>
+      <Link className = "nav-link active" aria-current="page" to = '/Logout'>Logout</Link>
 
       </div>
     </div>
