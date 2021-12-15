@@ -37,8 +37,8 @@ const JournalPage = () => {
     console.log("user.id ====================");
     console.log(user.id);
     useEffect(() => {
-        axios.post("http://localhost:9001/journals/", user.id)
-        .then((response) => setJournals(response))
+        axios.post(`http://localhost:9001/journals/${user.id}`)
+        .then((response) => setJournals(response.journalnotes))
         .catch(error => console.error(error));
     });
 
@@ -65,7 +65,7 @@ const JournalPage = () => {
                 </table>
 
                 <div className="row">
-                {journals.map(journal => <div>{journal} </div> )}
+                {journals.map(journal => <div>{journal.journalnotes}</div> )}
             </div>
 
                 </div>
