@@ -16,6 +16,34 @@ const JournalPage = () => {
         password : ''
     });
 
+    const testnotes = [
+        {
+            "journalid": 2,
+            "userid": 1,
+            "journalnotes": "Delicious tasty relaxing chillout...."
+        },
+        {
+            "journalid": 3,
+            "userid": 1,
+            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-))))))"
+        },
+        {
+            "journalid": 7,
+            "userid": 1,
+            "journalnotes": "Hello journal notes do it.... "
+        },
+        {
+            "journalid": 8,
+            "userid": 1,
+            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-)))))) It's Friday night smoke a bowl.... "
+        },
+        {
+            "journalid": 9,
+            "userid": 1,
+            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-)))))) It's Friday night smoke a bowl.... We are going to be entering more chilloutss heree....."
+        }
+    ];
+
     // const initialState = {
     //     userid: user.id,
     //     journalnotes: ''
@@ -37,10 +65,17 @@ const JournalPage = () => {
     console.log("user.id ====================");
     console.log(user.id);
     useEffect(() => {
+        const source = `http://localhost:9001/journals/${user.id}`;
+        console.log(source);
         axios.post(`http://localhost:9001/journals/${user.id}`)
-        .then((response) => setJournals(response.journalnotes))
+        // .then(output => console.log(output))
+        // .then((response) => setJournals(response.data.journalnotes))
+        .then((response) => setJournals(response.data))
         .catch(error => console.error(error));
     });
+
+    // console.log("journals  =================");
+    // console.log(journals);
 
     return (
         <div>
@@ -50,22 +85,20 @@ const JournalPage = () => {
                     <table class="table table-striped ">
                         <thead>
                             <tr>
-                            <th scope="col-xs-1">Entry Number</th>
-                            <th scope="col-xs-11">Journal Entry</th>
+                            <th scope="col-xs-1">Journal Entry</th>
                             </tr>
                         </thead>
                         <tbody>
-                    <tr>
-                    {/* <td scope="row">{responseData.Id}1</td> */}
-                    <div className='overflow-auto'>
-                    {/* <td className='' scope = "col">{responseData.Entry}</td> */}
-                    </div>
-                    </tr>
+                    {/* <tr> */}
+                        {journals.map(journal => <tr>{journal.journalnotes}</tr> )}
+                        {/* <td scope="row">{responseData.Id}1</td> */}
+                    {/* </tr> */}
                     </tbody>
                 </table>
 
                 <div className="row">
-                {journals.map(journal => <div>{journal.journalnotes}</div> )}
+                {/* {journals.map(journal => <div>{journal.journalnotes}</div> )} */}
+                {/* {testnotes.map(journal => <div>{journal.journalnotes}</div> )} works */}
             </div>
 
                 </div>
