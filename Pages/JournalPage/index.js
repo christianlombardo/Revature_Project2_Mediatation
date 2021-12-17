@@ -11,21 +11,6 @@ const JournalPage = () => {
 
     const [journals, setJournals]  = useState([]);
 
-    const [journal, setUser] = useState({
-        email: '',
-        password : ''
-    });
-
-
-    // const initialState = {
-    //     userid: user.id,
-    //     journalnotes: ''
-    // }
-
-    // const [responseData, setResponseData] = useState({
-    //     initialState
-    // })
-
 // const journalHandler = (e) => {
 //     e.preventDefault();
 //     axios.get("http://localhost:9001/journals", user.id)
@@ -42,39 +27,27 @@ const JournalPage = () => {
         console.log(source);
         axios.post(`http://localhost:9001/journals/${user.id}`)
         // .then(output => console.log(output))
-        // .then((response) => setJournals(response.data.journalnotes))
         .then((response) => setJournals(response.data))
         .catch(error => console.error(error));
     });
 
-    // console.log("journals  =================");
-    // console.log(journals);
 
     return (
         <div>
-                <NavbarLogged />
+            <NavbarLogged />
 
-                <div className='journalwrapper text-justify table-bordered table-primary' >
-                    <table class="table table-striped ">
-                        <thead>
-                            <tr>
-                            <th scope="col-xs-1">Journal Entry</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                    {/* <tr> */}
+            <div className='journalwrapper text-justify table-bordered table-primary' >
+                <table class="table table-striped ">
+                    <thead>
+                        <tr>
+                        <th scope="col-xs-1">Journal Entry</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {journals.map(journal => <tr>{journal.journalnotes}</tr> )}
-                        {/* <td scope="row">{responseData.Id}1</td> */}
-                    {/* </tr> */}
                     </tbody>
                 </table>
-
-                <div className="row">
-                {/* {journals.map(journal => <div>{journal.journalnotes}</div> )} */}
-                {/* {testnotes.map(journal => <div>{journal.journalnotes}</div> )} works */}
             </div>
-
-                </div>
         </div>
     )
 }
