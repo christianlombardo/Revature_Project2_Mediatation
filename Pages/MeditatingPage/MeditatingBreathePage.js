@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import axios from 'axios';
 import NavbarLogged from "../../Components/NavbarLogged";
 import { useSelector } from 'react-redux';
+import MeditationListPage from "../MeditationListPage";
 
 
 const MeditatingBreathePage = (post) => {
@@ -33,7 +34,7 @@ const MeditatingBreathePage = (post) => {
         });
         console.log("onChangeHandler ========================");
         console.log(journal)
-    }
+    }    
 
 
     const submitHandler = (e) => {
@@ -42,7 +43,9 @@ const MeditatingBreathePage = (post) => {
         axios.post("http://localhost:9001/users/journal", journal)
         .then((response) => {
             console.log(response);
+            <MeditationListPage />
         });
+      
     };
 
     
@@ -79,7 +82,7 @@ const MeditatingBreathePage = (post) => {
                         <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1"  name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
                     </div>
-                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} >Submit Entry</button>
+                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} ><Link to= '/MeditationList' className="lastLink">Submit</Link></button>
                 </form>
 
                 <br></br>

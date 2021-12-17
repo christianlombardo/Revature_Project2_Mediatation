@@ -62,7 +62,7 @@ const MeditatingRelaxPage = (props) => {
                 <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit Entry</button>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit"><Link to= '/MeditationList' className = "lastLink" >Submit</Link></button>
                 </form>
                 <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
