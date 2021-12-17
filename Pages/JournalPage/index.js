@@ -16,33 +16,6 @@ const JournalPage = () => {
         password : ''
     });
 
-    const testnotes = [
-        {
-            "journalid": 2,
-            "userid": 1,
-            "journalnotes": "Delicious tasty relaxing chillout...."
-        },
-        {
-            "journalid": 3,
-            "userid": 1,
-            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-))))))"
-        },
-        {
-            "journalid": 7,
-            "userid": 1,
-            "journalnotes": "Hello journal notes do it.... "
-        },
-        {
-            "journalid": 8,
-            "userid": 1,
-            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-)))))) It's Friday night smoke a bowl.... "
-        },
-        {
-            "journalid": 9,
-            "userid": 1,
-            "journalnotes": "Delicious tasty relaxing chilloutsssssssssss .......... :-)))))) It's Friday night smoke a bowl.... We are going to be entering more chilloutss heree....."
-        }
-    ];
 
     // const initialState = {
     //     userid: user.id,
