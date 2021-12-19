@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}  from "react";
 import { Provider } from "react-redux";
 import FavoriteButton from "../../Components/Meditating/FavoriteButton";
 import MeditationInstructions from "../../Components/Meditating/Instructions";
@@ -6,22 +6,61 @@ import TimerButtons from "../../Components/Meditating/Timer/TimerButtons";
 import TimerClass from "../../Components/Meditating/Timer/TimerClass";
 import TimerDisplay from "../../Components/Meditating/Timer/TimerDisplay";
 import './style.css';
-import Axios from 'axios';
-import NavbarLogged from "../../Components/NavbarLogged";
-
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+import axios from 'axios';
+import NavbarLogged from "../../Components/NavbarLogged";
+import { useSelector } from 'react-redux';
+import MeditationListPage from "../MeditationListPage";
+
+
 
 const MeditatingMantraPage = (props) => {
-    
-    const submitHandler = e => {
-        Axios.post("https://localhost9001/",{
-          
 
-        }).then((response) =>{
-            console.log(response);
+    const clearState = () => {
+        submittingMantra.sending = false;
+      };
+
+
+    const [submittingMantra, setSubmitting] = useState({
+        sending: false,
+    });
+
+
+    const user = useSelector(state => state.user);
+
+    console.log("MeditatingBreathePage ==================")
+    console.log(user);
+
+
+    const [journal, setJournal] = useState({
+        userid: user.id,
+        journalnotes : ''
+    });
+
+
+    function onChangeHandler(event){
+        //console.log(event.target.name)
+        setJournal({...journal,
+            [event.target.name]: event.target.value
         });
+        console.log("onChangeHandler ========================");
+        console.log(journal)
+    }    
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(journal);
+        axios.post("http://localhost:9001/users/journal", journal)
+        .then((response) => {
+            console.log(response);
+         
+        });
+        submittingMantra.sending = true;
     };
 
+    if(submittingMantra.sending == false){
+       
     return(
         <div className = "wrapperpages">
              <NavbarLogged />
@@ -54,7 +93,7 @@ const MeditatingMantraPage = (props) => {
                 <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit"><Link to= '/MeditationList' className = "lastLink" >Submit</Link></button>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit</button>
                 </form>
                 <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>
@@ -68,7 +107,12 @@ const MeditatingMantraPage = (props) => {
             </div>
         </div>
     )
-
+            }
+else{
+    return(
+        <MeditationListPage />
+    )
+}
 }
 
 export default MeditatingMantraPage;
