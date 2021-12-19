@@ -18,7 +18,7 @@ const MeditatingRelaxPage = (props) => {
         submittingRelax.sending = false;
       };
 
-    const [submittingRelax, setSubmitting] = useState({
+    const [submittingRelax, setSubmittingRelax] = useState({
         sending: false,
     });
 
@@ -53,7 +53,7 @@ const MeditatingRelaxPage = (props) => {
             console.log(response);
          
         });
-        submittingRelax.sending = true;
+        setSubmittingRelax = true;
     };
 
     if(submittingRelax.sending == false){

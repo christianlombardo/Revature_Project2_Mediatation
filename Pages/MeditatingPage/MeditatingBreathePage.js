@@ -21,7 +21,7 @@ const MeditatingBreathePage = (props) => {
         submittingBreathe.sending = false;
       };
 
-    const [submittingBreathe, setSubmitting] = useState({
+    const [submittingBreathe, setSubmittingBreathe] = useState({
         sending: false,
     });
 
@@ -56,7 +56,7 @@ const MeditatingBreathePage = (props) => {
             console.log(response);
          
         });
-        setSubmitting(true)
+        setSubmittingBreathe(true)
     };
 
 

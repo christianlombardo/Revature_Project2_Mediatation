@@ -21,7 +21,7 @@ const MeditatingMantraPage = (props) => {
       };
 
 
-    const [submittingMantra, setSubmitting] = useState({
+    const [submittingMantra, setSubmittingMantra] = useState({
         sending: false,
     });
 
@@ -56,7 +56,7 @@ const MeditatingMantraPage = (props) => {
             console.log(response);
          
         });
-        submittingMantra.sending = true;
+        setSubmittingMantra = true;
     };
 
     if(submittingMantra.sending == false){
