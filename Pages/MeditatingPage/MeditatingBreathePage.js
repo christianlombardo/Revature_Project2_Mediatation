@@ -13,8 +13,19 @@ import { useSelector } from 'react-redux';
 import MeditationListPage from "../MeditationListPage";
 
 
-const MeditatingBreathePage = (post) => {
-    
+const MeditatingBreathePage = (props) => {
+
+
+
+    const clearState = () => {
+        submittingBreathe.sending = false;
+      };
+
+    const [submittingBreathe, setSubmitting] = useState({
+        sending: false,
+    });
+
+
     const user = useSelector(state => state.user);
 
     console.log("MeditatingBreathePage ==================")
@@ -43,15 +54,17 @@ const MeditatingBreathePage = (post) => {
         axios.post("http://localhost:9001/users/journal", journal)
         .then((response) => {
             console.log(response);
-            <MeditationListPage />
+         
         });
-      
+        submittingBreathe.sending = true;
     };
 
-    
+    if(submittingBreathe.sending == false){
+   
     return(
-        
+       
         <div className = "wrapperpages">
+            {clearState()}
           <NavbarLogged />
             <div className="container text-center">
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
@@ -82,7 +95,7 @@ const MeditatingBreathePage = (post) => {
                         <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1"  name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
                     </div>
-                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} ><Link to= '/MeditationList' className="lastLink">Submit</Link></button>
+                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} >Submit</button>
                 </form>
 
                 <br></br>
@@ -96,5 +109,16 @@ const MeditatingBreathePage = (post) => {
         </div>
         )
     }
+    else{
+        return(
+           <div>
+               
+            <MeditationListPage />
+         
+            </div>
+        )
+    }
+}
+
 
 export default MeditatingBreathePage;
