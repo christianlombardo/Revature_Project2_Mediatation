@@ -21,6 +21,9 @@ const LoginPage = (props) => {
         password : ''
     });
 
+    // states for checking the errors
+    const [error, setError] = useState(false);
+
     const [userResponse, setUserResponse] = useState({
         id: 0,
         name: '',
@@ -34,6 +37,7 @@ const LoginPage = (props) => {
         dispatch({type: userResponse})
     }
 
+
   const submitHandler = (e) => {
         e.preventDefault();
         console.log(user);
@@ -46,6 +50,7 @@ const LoginPage = (props) => {
                 email: response.data.email,
                 password: response.data.password
             });
+
             // console.log("user Response ====== ");
             // console.log(userResponse);
             // setUserHandler();
@@ -67,12 +72,37 @@ const LoginPage = (props) => {
         })
     };
 
+    const checkFieldsHandler = (e) => {
+            if (userResponse.email !== user.email || userResponse.password !== user.password) {
+                setError(true);
+            }
+      }
+
+    const displayMessage = () => {
+        if (error){  // show error message if error is true
+          return (
+              <div
+                  className="error"
+                  style={{
+                      display: error ? "" : "none",
+                  }}>
+                      <h5 style={{
+                              color: "black",
+                              backgroundColor: "red",
+                      }}>Please enter your correct username and password.</h5>
+              </div>
+        )
+        }
+    }
+
+
     function onChangeHandler(event){
         //console.log(event.target.name)
         setUser({...user,
             [event.target.name]: event.target.value
         })
     }
+
 
     if (userResponse.email === user.email && userResponse.password === user.password) {
         // logged in
@@ -111,7 +141,13 @@ const LoginPage = (props) => {
                                                         <label className="form-label" htmlFor="password">Password</label>
                                                     </div>
 
-                                                    <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "login">Login</button>
+                                                    <br />
+                                                    <button className="btn btn-outline-primary btn-lg px-10" onClick={checkFieldsHandler} type="submit" value = "login">Login</button>
+                                                    <br />
+                                                    <br />
+                                                    <div className="messages">
+                                                        {displayMessage()}
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>
