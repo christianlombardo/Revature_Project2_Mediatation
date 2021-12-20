@@ -59,10 +59,11 @@ const MeditatingMantraPage = (props) => {
         setSubmittingMantra(true)
     };
 
-    if(submittingMantra.sending == false){
+    if(submittingMantra.sending === false){
        
     return(
         <div className = "wrapperpages">
+            {clearState()}
              <NavbarLogged />
             <div className="container text-center">
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}

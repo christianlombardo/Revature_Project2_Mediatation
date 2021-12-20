@@ -56,9 +56,10 @@ const MeditatingRelaxPage = (props) => {
         setSubmittingRelax(true)
     };
 
-    if(submittingRelax.sending == false){
+    if(submittingRelax.sending === false){
     return(
         <div>
+            {clearState()}
              <NavbarLogged />
             <div className="container text-center">
                 <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
