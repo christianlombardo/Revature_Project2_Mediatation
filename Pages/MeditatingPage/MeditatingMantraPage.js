@@ -56,7 +56,7 @@ const MeditatingMantraPage = (props) => {
             console.log(response);
          
         });
-        setSubmittingMantra = true;
+        setSubmittingMantra(true)
     };
 
     if(submittingMantra.sending == false){

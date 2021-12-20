@@ -53,7 +53,7 @@ const MeditatingRelaxPage = (props) => {
             console.log(response);
          
         });
-        setSubmittingRelax = true;
+        setSubmittingRelax(true)
     };
 
     if(submittingRelax.sending == false){
