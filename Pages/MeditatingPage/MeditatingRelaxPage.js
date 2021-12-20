@@ -96,10 +96,10 @@ const MeditatingRelaxPage = (props) => {
                 <form onSubmit = {submitHandler}>
                 <br></br>
                 <div class="form-group">
-                <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
                 </div>
-                <button className="btn btn-outline-primary btn-lg px-10" type="submit" value = "submit">Submit</button>
+                <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} >Submit</button>
                 </form>
                 <br></br>
                 <Link to= '/MeditationList' className = "lastLink" >Go to List of Meditations</Link>

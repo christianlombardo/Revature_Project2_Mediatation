@@ -15,10 +15,9 @@ import MeditationListPage from "../MeditationListPage";
 
 const MeditatingBreathePage = (props) => {
 
-
-
     const clearState = () => {
         submittingBreathe.sending = false;
+        //setSubmittingBreathe(false) // does not work
       };
 
     const [submittingBreathe, setSubmittingBreathe] = useState({
@@ -59,14 +58,12 @@ const MeditatingBreathePage = (props) => {
         setSubmittingBreathe(true)
     };
 
-
     if(submittingBreathe.sending === false){
    
         return(
-        
             <div className = "wrapperpages">
                 {clearState()}
-            <NavbarLogged />
+                <NavbarLogged />
                 <div className="container text-center">
                     <h1>{/*props.name*/}</h1> { /* <FavoriteButton /> */}
                     {/* <TimerDisplay />
@@ -94,7 +91,7 @@ const MeditatingBreathePage = (props) => {
                         <br></br>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Please write your experience and feelings about today's session</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1"  name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="journalnotes" onChange={onChangeHandler} value={journal.journalnotes} rows="3"></textarea>
                         </div>
                         <button className="btn btn-outline-primary btn-lg px-10" type="submit" onSubmit={submitHandler} >Submit</button>
                     </form>
