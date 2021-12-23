@@ -35,8 +35,25 @@
 
 ## Postman Tests
 
+* Write a test user (POST method) http://localhost:9001/users/register
+    ```
+    {
+        "name": "testusername",
+        "email": "tesusername@tesusername.com",
+        "password": "123",
+        "meditationInterests": "Relax, Breathe, Focus, Mantra."
+    }
+    ```
+
 * Gets all users: (GET method) http://localhost:9001/users
 * Writes Journal notes (POST method) http://localhost:9001/users/journal
+    ```
+    {
+        "userid": 1,
+        "journalnotes": "Hello more journal notes do it.... "
+    }
+    ```
+
 * Reads All Journals From user id 1 (POST method) http://localhost:9001/journals/1
 
 
